@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prospect Company Research Tool</title>
+    <link rel="stylesheet" href="ai_prospect_research_css.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            width: calc(100% - 24px);
+            max-width: 400px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .summary-output {
+            margin-top: 25px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        .summary-output h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        #summaryText {
+            font-size: 16px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Prospect Company Research Tool</h1>
+        <p>Enter the company website URL to generate a concise research summary for your sales team.</p>
+        
+        <form id="companyForm">
+            <label for="companyUrl">Company Website URL:</label>
+            <input type="text" id="companyUrl" name="companyUrl" placeholder="https://example.com" required>
+            <button type="submit">Generate Summary</button>
+        </form>
+
+        <div id="summaryOutput" class="summary-output" style="display: none;">
+            <h2>Company Summary:</h2>
+            <p id="summaryText">No summary available yet.</p>
+        </div>
+    </div>
+    <script src="ai_prospect_research_js.js"></script>
+</body>
+</html>
